@@ -7,7 +7,7 @@ class House
 	Room* rooms;
 	int total_rooms_house;
 	int static floors;
-	string static name_file_where_save;
+	const static string  name_file_where_save;
 
 public:
 	void AddRoom();
@@ -28,7 +28,7 @@ public:
 	int static GetTotalFloors();
 
 
-	static string GetFileName();
+	string GetFileName() const;
 
 	void Save();
 	void Load();

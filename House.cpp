@@ -1,7 +1,7 @@
 #include "House.h"
 
 int House::floors = 5;
-string House::name_file_where_save = "House.bin";
+const string House::name_file_where_save = "House.bin";
 
 void House::AddRoom(Room& room)
 {
@@ -156,10 +156,12 @@ int House::GetTotalFloors()
 }
 
 
-string House::GetFileName()
+string House::GetFileName() const
 {
 	return name_file_where_save;
 }
+
+
 
 void House::Save()
 {
@@ -238,6 +240,7 @@ void House::HouseMenu()
 		case '3':
 		EditOwnersInfo();
 		EditRoomInfo(); 
+		system("cls");
 		break;
 		case '4':
 			system("cls");
@@ -284,6 +287,7 @@ House::House()
 House::House(const House& src)
 {
 	//cout << "\nHouse copy" << endl;
+
 	total_rooms_house = src.total_rooms_house;
 	rooms = new Room [total_rooms_house];
 	for (int i = 0; i < total_rooms_house; i++)

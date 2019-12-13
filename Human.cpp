@@ -52,23 +52,20 @@ void Human::HumanSetInfo()
 	string s1,s2;
 	char a[100];
 	cout << "\n==============USER CONTACT===========" << endl;
-
-	cout << "\nEnter FIO : " ;
 	cin.clear();
 	cin.ignore();
+	cout << "\nEnter FIO : " ;
+	
 	cin.getline(a, 100);
 	fio = a;
 	cout << "\nHome phone: ";
 
-	cin.ignore();
 	cin >> s1;
 	home_phone = s1;
 	cin.clear();
 	cin.ignore();
 
 	cout << "\nWork phone: ";
-
-	cin.ignore();
 	cin >> s2;
 	work_phone = s2;
 	cin.clear();
